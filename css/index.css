@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper__home-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    background-image: url("../img/guillotina.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.box__start-game {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20vh;
+    width: 100vw;
+    background-color: #5C9B96;
+}
+
+.title__start-game {
+    color: #fff;
+    font-weight: 900;
+}
+
+.button__start-game {
+    background-color: #fff;
+    color: #5C9B96;
+    font-weight: bold;
+}
+
+.button__start-game:hover {
+    background-color: #385f5c;
+    color: #fff;
+    border: 2px solid #fff;
+}
