@@ -13,16 +13,19 @@
     <title>Le Guillotine</title>
 </head>
 <body>
+    <!-- Div listas -->
     <h7>La siguiente persona es...</h7>
-    <div class="verdugo">
-        <img src="/img/verdugo.png"/>
-    </div>
+    <p id="person"></p>
+    <!-- Div Vectores -->
     <div class="vectors">
-        <img src="/img/guillotine_vector.png" />
+        <img src="/img/verdugo.png" class="verdugo"/>
+        <img src="/img/guillotine_vector.png" class="guillotine"/>
+    </div>
     </div>
     <div>
-        <button class="button">Guillotinear</button>
-        <button class="reset_button" type="reset">Reset</button>
+        <button id="start" class="button">Guillotinear</button>
+        <button id="reset" class="reset_button" type="reset">Reset</button>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>

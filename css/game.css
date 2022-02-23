@@ -34,12 +34,12 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    z-index: 1;
 }
 
 .guillotina{
     display: flex;
     justify-content: center;
-    z-index: 1;
 }
 
 
