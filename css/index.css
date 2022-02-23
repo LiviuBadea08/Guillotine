@@ -10,7 +10,7 @@
     height: 100vh;
     display: flex;
     align-items: flex-end;
-    background-image: url("../img/guillotina.jpg");
+    background-image: url("../img/cuadro_guillotine.jpg");
     background-size: cover;
     background-position: center;
 }
