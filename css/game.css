@@ -13,30 +13,42 @@ body{
 .button, .reset_button {
     display:flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
-    justify-content: flex-start;
-    height: 5vh;
+    height: 3.5vh;
     width: 50vw;
     background-color: #5C9B96;
     border-radius: 12px;
-    margin: auto;
+    margin: 0 auto;
+    font-weight: 100;
 }
 
 .reset_button{
     background: #87B4B0;
+    margin: 1vh auto;
 }
 
 
 .illustration{
-    margin: 0;
+    margin: 0 auto;
     height: 60vh;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+#person{
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
 
-
-
-
+.coderText{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
 
 
 
