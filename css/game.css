@@ -1,9 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 body{
@@ -15,32 +14,26 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    height: 10vh;
-    width: 30vw;
+    justify-content: flex-start;
+    height: 5vh;
+    width: 50vw;
     background-color: #5C9B96;
     border-radius: 12px;
+    margin: auto;
 }
 
 .reset_button{
     background: #87B4B0;
 }
 
-.guillotina{
-    z-index: -1;
-}
 
-.verdugo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    z-index: 1;
-}
-
-.guillotina{
+.illustration{
+    margin: 0;
+    height: 60vh;
     display: flex;
     justify-content: center;
 }
+
 
 
 
