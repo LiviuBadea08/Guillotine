@@ -68,6 +68,7 @@ function reset() {
 
 }
 
+
 /**
  * Función StartKill
  * 
@@ -77,6 +78,7 @@ function reset() {
  */
 
 function startKill() {
+
     let max = codersNames.length;
     
     let randomNumber = getRandomNumber(max);
