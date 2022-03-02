@@ -13,29 +13,36 @@
     <title>Le Guillotine</title>
 </head>
 <body>
-    <div class="coderText">
-        <h7>La siguiente persona es...</h7>
-        <p id="person"></p>
-    </div> 
+    
     <div class="boton">
-        <button id="boton-vivos" class="btn"><i class="fa-regular fa-face-smile"></i></button><button id="boton-muertos" class="btn"><i class="fa-regular fa-face-dizzy"></i></button>
+        <button id="boton-vivos" class="btn littleButton"><i class="fa-regular fa-face-smile"></i></button><button id="boton-muertos" class="btn littleButton"><i class="fa-regular fa-face-dizzy"></i></button>
     </div>
-    
-    
     <div id="menu-vivos" class="menu">
-        <h1 class="icon"><i class="fa-regular fa-face-smile"></i></h1>
+        <h2 class="icon"><i class="fa-regular fa-face-smile"></i></h2>
         <p id="vivos"></p>
     </div>
     <div id="menu-muertos" class="menu">
         <h2 class="icon"><i class="fa-regular fa-face-dizzy"></i></h2>
         <p id="muertos"></p>
     </div> 
-    <div>
-        <img src="/img/whole_illustration.png" class="illustration"/>
-    </div>
+
+    <section class="wrapper__game">
+        <div class="coderText">
+            <h7>La siguiente persona es...</h7>
+            <p id="person"></p>
+        </div> 
+
+        <div>
+            <img src="/img/verdugo_guillotina.png" />
+        </div>
+    </section>
+    
+    
+    
+    
     <div>
         <button id="start" class="button">Guillotinear</button>
-        <button id="reset" class="reset_button" type="reset">Reset</button>
+        <button id="reset" class="button reset" type="reset">Reset</button>
     </div>
     <script src="https://kit.fontawesome.com/3ef0be5eca.js" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>

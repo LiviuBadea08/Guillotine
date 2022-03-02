@@ -8,19 +8,33 @@
 body{
     background: #CBDBDA;
 }
+img {
+    width: 100%;
+}
 
 
-.button, .reset_button {
+.button {
     display:flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    height: 3.5vh;
+    color: white;
     width: 50vw;
+    max-width: 225px;
     background-color: #5C9B96;
     border-radius: 12px;
     margin: 0 auto;
+    padding: 2vh 0;
     font-weight: 100;
+}
+.reset {
+    background-color: #87B4B0;
+}
+
+.wrapper__game {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .reset_button{
@@ -29,24 +43,20 @@ body{
 }
 
 
-.illustration{
-    position: relative;
-    margin: 0 auto;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    z-index: 0;
-}
-
 #person{
     font-weight: bold;
 }
 
 .coderText{
     display: flex;
+    flex-direction:column;
     justify-content: center;
-    position: absolute;
-
+    align-items: center;
+    background-image: url('../img/bocadillo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20vh;
+    padding: 0 5vw;
 }
 
 .menu {
@@ -59,18 +69,25 @@ body{
 .menu.show {
     display:flex;
     flex-direction:column;
-    width: 30vw;
+    width: 50vw;
     padding: 5vh 0;
     height: fit-content;
     background-color: #385f5c;
     text-align:center;
     line-height: 3;
-    z-index: 2;
+    z-index: 1;
+    color:white;
 }
 
 .boton{
     display: flex;
     justify-content: flex-end;
+}
+
+.littleButton {
+    color:white;
+    background-color: #5C9B96;
+    margin: 1vh 2vw;
 }
 
 .btn{
