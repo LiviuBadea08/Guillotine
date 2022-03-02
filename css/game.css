@@ -46,8 +46,33 @@ body{
     display: flex;
     justify-content: center;
     position: absolute;
+
 }
 
+.menu {
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+.menu.show {
+    display:flex;
+    flex-direction:column;
+    width: 30vw;
+    padding: 5vh 0;
+    height: fit-content;
+    background-color: #385f5c;
+    text-align:center;
+    line-height: 3;
+    z-index: 2;
+}
 
+.boton{
+    display: flex;
+    justify-content: flex-end;
+}
 
-
+.btn{
+    font-size: 30px;
+}

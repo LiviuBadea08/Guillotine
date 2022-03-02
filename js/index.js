@@ -1,5 +1,12 @@
 let codersNames = ["Jessica Mejia", "Liviu Badea", "Abde Belkhialat", "Adrián Pelayo"];
 let deadCodersNames = [];
+let myButton = document.getElementById('boton-vivos');
+let my2Button = document.getElementById('boton-muertos');
+let myAliveMenu = document.getElementById('menu-vivos');
+let myDeadMenu = document.getElementById('menu-muertos')
+let myParagraph = document.getElementById('vivos');
+let my2Paragraph = document.getElementById('muertos');
+
 
 const deadPersonParagraph = document.getElementById('person');
 const startButton = document.getElementById('start');
@@ -38,7 +45,7 @@ function killCoder(coderList, resultRandomNumber, deadCoderList) {
     
     let deadCoder = coderList.splice(resultRandomNumber, 1);
 
-    deadCoderList.push(deadCoder);
+    deadCoderList.unshift(deadCoder);
 
     return deadCoder;
 
@@ -86,6 +93,43 @@ function startKill() {
     deadPersonParagraph.innerHTML = coder;
 
 }
+
+function makeTextFromArray(array) {
+    let text = '';
+    for (let index = 0; index < array.length; index++) {
+        text += array[index];
+        text += "\n";
+    }
+    return text;
+}
+
+function toggleMenu(firstMenu, secondMenu) {
+
+    firstMenu.classList.toggle('show');
+    secondMenu.classList.remove('show');
+
+}
+
+function showAliveMenu() {
+
+    toggleMenu(myAliveMenu, myDeadMenu);
+
+    let coderList = makeTextFromArray(codersNames);
+
+    myParagraph.innerText = coderList;
+}
+
+function showDeadMenu() {
+
+    toggleMenu(myDeadMenu, myAliveMenu);
+
+    let coderList = makeTextFromArray(deadCodersNames);
+
+    my2Paragraph.innerText = coderList;
+}
+
+myButton.addEventListener('click', showAliveMenu);
+my2Button.addEventListener('click', showDeadMenu);
 
 startButton.addEventListener('click', startKill);
 resetButton.addEventListener('click', reset);
