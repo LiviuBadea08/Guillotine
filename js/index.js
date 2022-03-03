@@ -1,93 +1,100 @@
-let codersNames = ["Jessica Mejia", "Liviu Badea", "Abde Belkhialat", "Adrián Pelayo"];
+let codersNames = ["Jessica Mejia", "Liviu Badea", "Abde Belkhialat", "Adrián Pelayo", "Damaris Teoc", "Ales", "Daniel Calvo", "Àlex Vidal", "Scarlet Rosa", "Albert Martinez", "Ingrid Alvarez", "Uri Codina", "Sergi Aparicio", "Guillermo", "Miguel Angel"];
 let deadCodersNames = [];
+let aliveMenuButton = document.getElementById('boton-vivos');
+let deadMenuButton = document.getElementById('boton-muertos');
+let myAliveMenu = document.getElementById('menu-vivos');
+let myDeadMenu = document.getElementById('menu-muertos');
+let alivePeopleMenu = document.getElementById('vivos');
+let deadPeopleMenu = document.getElementById('muertos');
 
-const deadPersonParagraph = document.getElementById('person');
+
+const deadPerson = document.getElementById('person');
 const startButton = document.getElementById('start');
 const resetButton = document.getElementById('reset');
 
-/**
- * function getRandomNumber
- * 
- * Argumentos: max (Número máximo que va a generar)
- * 
- * Función: Generar un número aleatorio
- */
+function randomName(max){
 
-function getRandomNumber(max) {
+    resultRandomName = Math.floor(Math.random()*max);
 
-    let resultRandomNumber;
-
-    resultRandomNumber = Math.random() * (max - 0) + 0;
-
-    resultRandomNumber = Math.floor(resultRandomNumber);
-
-    return resultRandomNumber;
+    return resultRandomName;
 
 }
 
-/**
- * function KillCoder
- * 
- * Argumentos: coderList (lista de vivos), resultRandomNumber (número generado aleatorio), deadCoderList (lista de muertos)
- * 
- * Función: Quita al coder del array de vivos para meterlo al array de los muertos
- */
-
-function killCoder(coderList, resultRandomNumber, deadCoderList) {
-
+function killCoder(coderList, randomNumber, deadList){
+    let deadCoder = "";
     
-    let deadCoder = coderList.splice(resultRandomNumber, 1);
-
-    deadCoderList.push(deadCoder);
+    for (let index = 0; index < coderList.length; index++) {
+        if (index == randomNumber) {
+            deadCoder = coderList.splice(index, 1).toString();
+            deadList.unshift(deadCoder);
+        }
+    }
 
     return deadCoder;
 
 }
 
-/**
- * function Reset
- * 
- * Argumentos: ninguno
- * 
- * Función: Limpia la lista de muertos, reviviéndolos, y haciendo que resetee el juego.
- */
-
-function reset() {
-
-    for (let index = 0; index < deadCodersNames.length; index++) {
-
-        let coder = deadCodersNames[index];
-
-        codersNames.push(coder);
-
-    }
-
-    deadCodersNames = [];
-
-    deadPersonParagraph.innerHTML = "";
-
-}
-
-
-/**
- * Función StartKill
- * 
- * Argumentos: ninguno
- * 
- * Función: Guillotinea a una persona.
- */
-
-function startKill() {
-
-    let max = codersNames.length;
+function start(coderList, deadList){
     
-    let randomNumber = getRandomNumber(max);
+    let max = coderList.length;
+    let randomNumber = randomName(max);
+    let deadCoder = killCoder(coderList, randomNumber, deadList);
 
-    let coder = killCoder(codersNames, randomNumber, deadCodersNames);
+    deadPerson.innerHTML = deadCoder;
 
-    deadPersonParagraph.innerHTML = coder;
+} 
+
+function reset(coderList,deadList){
+
+    let deadCoders = deadList.splice(0, deadList.length);
+
+    codersNames = coderList.concat(deadCoders);
+
+    deadPerson.innerHTML = "";
+    
+}
+
+function makeTextFromArray(array) {
+    let text = '';
+    for (let index = 0; index < array.length; index++) {
+        text += array[index];
+        text += "\n";
+    }
+    return text;
+}
+
+function toggleMenu(firstMenu, secondMenu) {
+
+    firstMenu.classList.toggle('show');
+    secondMenu.classList.remove('show');
 
 }
 
-startButton.addEventListener('click', startKill);
-resetButton.addEventListener('click', reset);
+function showAliveMenu() {
+
+    toggleMenu(myAliveMenu, myDeadMenu);
+
+    let coderList = makeTextFromArray(codersNames);
+
+    alivePeopleMenu.innerText = coderList;
+}
+
+function showDeadMenu() {
+
+    toggleMenu(myDeadMenu, myAliveMenu);
+
+    let coderList = makeTextFromArray(deadCodersNames);
+
+    deadPeopleMenu.innerText = coderList;
+}
+
+aliveMenuButton.addEventListener('click', showAliveMenu);
+deadMenuButton.addEventListener('click', showDeadMenu);
+
+startButton.addEventListener('click', () => {
+    start(codersNames, deadCodersNames);
+});
+
+resetButton.addEventListener('click', () => {
+    reset(codersNames, deadCodersNames);
+});
