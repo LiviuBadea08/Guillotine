@@ -35,6 +35,10 @@ function killCoder(coderList, randomNumber, deadList){
 }
 
 function start(coderList, deadList){
+
+    if(coderList.length == 0) {
+        location.href = "./endgame.html";
+    }
     
     let max = coderList.length;
     let randomNumber = randomName(max);
