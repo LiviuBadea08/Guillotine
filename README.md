@@ -28,4 +28,4 @@ Para el desarrollo de esta landing page ha sido necesario:
 
 ## Agradecimientos
 
-A Factoria F5 y a nuestros compañeros de promoción
+A Factoria F5 y a nuestros compañeros de promoción.
