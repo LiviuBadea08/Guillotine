@@ -3,7 +3,7 @@ let deadCodersNames = [];
 let aliveMenuButton = document.getElementById('boton-vivos');
 let deadMenuButton = document.getElementById('boton-muertos');
 let myAliveMenu = document.getElementById('menu-vivos');
-let myDeadMenu = document.getElementById('menu-muertos');
+let myDeadMenu = document.getElementById('menu-muertos')
 let alivePeopleMenu = document.getElementById('vivos');
 let deadPeopleMenu = document.getElementById('muertos');
 

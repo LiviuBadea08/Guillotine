@@ -1,50 +1,100 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 body{
     background: #CBDBDA;
 }
+img {
+    width: 100%;
+    margin: center;
+}
 
 
-.button, .reset_button {
+.button {
     display:flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
-    justify-content: space-evenly;
-    height: 10vh;
-    width: 30vw;
+    color: white;
+    width: 50vw;
+    max-width: 225px;
     background-color: #5C9B96;
     border-radius: 12px;
+    margin: 0 auto;
+    padding: 2vh 0;
+    font-weight: 100;
+}
+.reset {
+    background-color: #87B4B0;
+}
+
+.wrapper__game {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .reset_button{
     background: #87B4B0;
+    margin: 1vh auto;
 }
 
-.guillotina{
-    z-index: -1;
+
+#person{
+    font-weight: bold;
 }
 
-.verdugo{
+.coderText{
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     justify-content: center;
+    align-items: center;
+    background-image: url('../img/bocadillo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20vh;
+    padding: 0 5vw;
+}
+
+.menu {
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu.show {
+    display:flex;
+    flex-direction:column;
+    width: 50vw;
+    padding: 5vh 0;
+    height: fit-content;
+    background-color: #385f5c;
+    text-align:center;
+    line-height: 3;
     z-index: 1;
+    color:white;
 }
 
-.guillotina{
+.boton{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
+.littleButton {
+    color:white;
+    background-color: #5C9B96;
+    margin: 1vh 2vw;
+}
 
+.btn{
+    font-size: 30px;
+}
 
-
-
-
-
+#initialText{
+font-size: 1rem;
+}
