@@ -11,10 +11,13 @@
   background-image: url(../img/guillotina_endgame.png);
   background-repeat: no-repeat;
   background-color: #cbdbda;
+  background-size:contain;
+  background-position: bottom;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  
 }
 
 .box__endgame {
@@ -44,8 +47,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 10vh;
-    width: 30vw;
+    height: 6vh;
+    width: 36vw;
     background-color: #5C9B96;
     border-radius: 12px;
     font-weight: bold;
