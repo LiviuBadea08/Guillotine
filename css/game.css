@@ -10,6 +10,7 @@ body{
 }
 img {
     width: 100%;
+    margin: center;
 }
 
 
@@ -64,8 +65,8 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
+}
+
 .menu.show {
     display:flex;
     flex-direction:column;
@@ -92,4 +93,8 @@ img {
 
 .btn{
     font-size: 30px;
+}
+
+#initialText{
+font-size: 1rem;
 }
