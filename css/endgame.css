@@ -8,7 +8,7 @@
 .wrapper__endgame {
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/verdugo.png");
+  background-image: url(../img/verdugo.png);
   background-repeat: no-repeat;
   background-color: #cbdbda;
   background-position-x: left;
@@ -23,38 +23,8 @@
   width: 40vw;
   text-align: center;
   padding: 1vh 4vw;
+  background-image: url(../img/bocadillo.png);
 }
-
-.sanwich {
-  background: white;
-  border-radius: 50%;
-  box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
-.sanwich::before {
-  border: 15px solid white;
-  content: "";
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  position: absolute;
-  top: 20px;
-  right: -22px;
-  transform: rotate(-113deg);
-}
-
-.lil_chickens {
-  font-weight: 900;
-}
-
-.button__endgame {
-  background-color: #fff;
-  color: #5c9b96;
-  font-weight: bold;
-  width: fit-content;
-}
-
 .button__endgame:hover {
   background-color: #385f5c;
   color: #fff;
