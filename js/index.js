@@ -108,6 +108,6 @@ resetButton.addEventListener("click", () => {
 });
 
 function sound() {
-  let snd = new Audio("../sound/guillo.mp4");
+  let snd = new Audio("./sound/guillo.mp4");
   snd.play();
 }
