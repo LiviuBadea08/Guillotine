@@ -38,7 +38,7 @@ img {
     align-items:center;
 }
 
-.reset_button{
+.reset{
     background: #87B4B0;
     margin: 1vh auto;
 }
@@ -58,6 +58,7 @@ img {
     background-position: center;
     height: 20vh;
     padding: 0 5vw;
+    font-size: 0.9rem;
 }
 
 .menu {
@@ -70,7 +71,7 @@ img {
 .menu.show {
     display:flex;
     flex-direction:column;
-    width: 50vw;
+    width: 50vw; 
     padding: 5vh 0;
     height: fit-content;
     background-color: #385f5c;
@@ -93,8 +94,4 @@ img {
 
 .btn{
     font-size: 30px;
-}
-
-#initialText{
-font-size: 1rem;
 }
