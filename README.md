@@ -28,4 +28,6 @@ Para el desarrollo de esta landing page ha sido necesario:
 
 ## Agradecimientos
 
-A Factoria F5 y a nuestros compañeros de promoción.
+A Factoria F5 y a nuestros compañeros de promoción.  
+
+![Foto pal Readme](https://github.com/LiviuBadea08/Guillotine/blob/dev/img/readme.jpeg)
